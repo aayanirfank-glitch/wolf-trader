@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolf Trader | Grow Your Profits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>🐺 Wolf Trader</h1>
+    <p>Helping you earn smarter. Wolf Trader empowers you to maximize your profits through expert strategies and trusted market insights.</p>
+
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">
+      💬 Chat on WhatsApp
+    </a>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+      ⏱️ Offer ends in <span id="timer">01:00:00</span>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose Wolf Trader?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>📈 Expert Strategies</h3>
+        <p>Get proven trading strategies designed by experienced market analysts to boost your returns.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💰 Profit Growth</h3>
+        <p>Our system helps clients consistently increase their trading profits through smart investments.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧠 Learn & Earn</h3>
+        <p>We educate our clients on market trends so you can trade confidently and independently.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>“Wolf Trader helped me triple my portfolio in just 6 months. Their team is amazing!”</p>
+        <h4>— Rajesh, Investor</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>“I learned more about smart trading here than anywhere else. Totally worth it!”</p>
+        <h4>— Priya, Trader</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wolf Trader. All rights reserved.</p>
+    <p>Made with ❤️ to help you grow your profits.</p>
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    // Set timer duration to 1 hour (3600 seconds)
+    let timeLeft = 3600;
+
+    const timerDisplay = document.getElementById("timer");
+
+    function updateTimer() {
+      const hours = Math.floor(timeLeft / 3600);
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = timeLeft % 60;
+
+      // Format time
+      timerDisplay.textContent =
+        `${hours.toString().padStart(2, '0')}:` +
+        `${minutes.toString().padStart(2, '0')}:` +
+        `${seconds.toString().padStart(2, '0')}`;
+
+      if (timeLeft > 0) {
+        timeLeft--;
+      } else {
+        clearInterval(timer);
+        timerDisplay.textContent = "Offer Expired!";
+      }
+    }
+
+    const timer = setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
